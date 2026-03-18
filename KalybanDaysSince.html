@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Days Since Last Kalyban Stream</title>
+    </head>
+    <body style ="background-color: slateblue;">
+        <h1 style="text-align: center; color:white; margin-top: 100px;">Days Since Kalyban's Last Stream</h1>
+       <section style="text-align: center;">
+        <div id="daysSince" style="font-size: 48px; color:white"></div>
+
+        <script>
+            // Target Date
+            const startDate = new Date("August 22, 2025 00:00:00").getTime();
+
+            // Updating function
+            function updateCounter() {
+                const now = new Date().getTime();
+                const difference = now - startDate;
+
+                // Calculate Days
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+                document.getElementById("daysSince").innerHTML = days;
+            }
+
+            // Run immediately, then update
+            updateCounter();
+            setInterval(updateCounter, 60000); //Code to update every minute
+        </script>
+        </section>
+        <aside style="font-size: 36px; color:white; text-align: center;">
+            <p>
+                This page is dedicated to the once live content creator "Kalyban"           
+            </p>
+            <p2>
+                Last (a)live August 22nd, 2025
+            </p2>
+        </aside>
+    </body>
+</html>
